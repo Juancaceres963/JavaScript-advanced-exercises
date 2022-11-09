@@ -1,0 +1,19 @@
+function fearNotLetter(str) {
+  let newCharte = str.charCodeAt(0);
+  let missing = undefined;
+
+  str 
+  .split("")
+  .forEach(letter => {
+    if (letter.charCodeAt(0) === newCharte){
+      newCharte++;
+    } else {
+      missing = String.fromCharCode(newCharte)
+    }
+  })
+  return missing;
+}
+
+console.log(fearNotLetter("abce"));
+
+// d
